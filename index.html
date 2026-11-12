@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow - Project Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>TaskFlow</h1>
+    <p>Project Management Dashboard</p>
+</header>
+
+<div class="container">
+
+    <h2>Dashboard Overview</h2>
+
+    <!-- Dashboard Cards -->
+    <div class="dashboard">
+
+        <div class="card total">
+            <h3>Total Tasks</h3>
+            <p id="totalTasks">0</p>
+        </div>
+
+        <div class="card pending">
+            <h3>Pending</h3>
+            <p id="pendingTasks">0</p>
+        </div>
+
+        <div class="card progress">
+            <h3>In Progress</h3>
+            <p id="progressTasks">0</p>
+        </div>
+
+        <div class="card completed">
+            <h3>Completed</h3>
+            <p id="completedTasks">0</p>
+        </div>
+
+    </div>
+
+    <!-- Add Task -->
+    <div class="task-form">
+        <h2>Add New Task</h2>
+
+        <input type="text" id="taskName"
+               placeholder="Enter task name">
+
+        <select id="taskStatus">
+            <option value="Pending">Pending</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Completed">Completed</option>
+        </select>
+
+        <button onclick="addTask()">Add Task</button>
+    </div>
+
+    <!-- Task List -->
+    <div class="task-section">
+
+        <h2>Project Tasks</h2>
+
+        <input type="text" id="searchTask"
+               placeholder="Search tasks...">
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Task Name</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="taskList"></tbody>
+            </table>
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 TaskFlow Dashboard</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
